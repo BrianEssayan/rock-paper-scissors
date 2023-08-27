@@ -21,3 +21,17 @@ function checkWinner(playerSelection, computerSelection) {
       return "Computer";
     }
   }
+
+
+// playRound(): Function that simulates the game round.
+function playRound(playerSelection, computerSelection) {
+    const result = checkWinner(playerSelection, computerSelection);
+    if (result == "Tie") {
+      return "It's a Tie!";
+    } else if (result == "Player") {
+      return `You Win! ${playerSelection} beats ${computerSelection}`;
+    } else {
+      return `You Lose! ${computerSelection} beats ${playerSelection}`;
+    }
+  }
+
